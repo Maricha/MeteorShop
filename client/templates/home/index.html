@@ -16,6 +16,8 @@
         </div>
     </div>
     <div class="container marketing">
-
+      {{#each featured }}
+        {{> productTile this}}
+      {{/each}}
     </div>
 </template>
