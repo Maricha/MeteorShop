@@ -1,11 +1,11 @@
-var productSeeds =  [
+var productSeeds = [
   {
     "sku" : "illudium-q36",
     "name" : "Illudium Q-36 Explosive Space Modulator",
     "image" : "illudium-q36.jpg",
     "summary" : "Need to destroy a planet? The new and improved Illudium Q36 will leave no stone un-vaporized!",
     "description": "At last, after two thousand years of research, the illudium Q-36 explosive space modulator is ready! Simply line up the trajectory, wait for planetary synchronization, make sure no rabbits are around - and kaboom! You *should* hear an earth-shattering kaboom.",
-    "price" : 4995,
+    "price" : 499500,
     "inventory" : 99,
     "status" : "published",
     "published_at" : new Date(),
@@ -22,7 +22,7 @@ var productSeeds =  [
     "image" : "honeymoon-mars.jpg",
     "summary" : "Tired of boring wedding pictures? Wow your friends with your marriage on Mars!",
     "description": "The most important part of any wedding is where it took place - because the pictures you take show just how amazing you and your partner are. So give your friends something to be jealous about with a wedding on Mars!",
-    "price" : 12332,
+    "price" : 1233200,
     "inventory" : 22,
     "status" : "published",
     "published_at" : new Date(),
@@ -39,7 +39,7 @@ var productSeeds =  [
     "image" : "johnny-liftoff.jpg",
     "summary" : "Keep your feet off the ground with our space-age rocket suit",
     "description": "Why walk **when you can fly**! Weak Martian gravity means you too can fly wherever you want, whenever you want with some rockets on your back. Light, portable and really loud - you'll be the talk of the Martian skies! ",
-    "price" : 89333,
+    "price" : 8933300,
     "inventory" : 43,
     "status" : "published",
     "published_at" : new Date(),
@@ -56,7 +56,7 @@ var productSeeds =  [
     "image" : "mars-mobile.jpg",
     "summary" : "Wheels? Who needs them! Use our space-age sky hooks to get around the surface of Mars!",
     "description": "Not quite flying, *not quite driving*: you'll love our new Sky-Hook Technology which powers the new, unique Mars Mobile. Point to fun things from our big windows and **see Mars in style**.",
-    "price" : 65321,
+    "price" : 6532100,
     "inventory" : 64,
     "status" : "published",
     "published_at" : new Date(),
@@ -73,7 +73,7 @@ var productSeeds =  [
     "image" : "mars-trek.jpg",
     "summary" : "Hop, skip, bounce your way along the major valleys and craters of Mars!",
     "description": "Driving is for **Earth-bound sissies**, and flying can be darn expensive. Strap your space boots on and come with us on a five-day trek across the surface of Mars. We'll try not to die of thirst by melting buried ice reserves and, if we're lucky, we'll find a Martian or two to eat.",
-    "price" : 65321,
+    "price" : 6532100,
     "inventory" : 99,
     "status" : "published",
     "published_at" : new Date(),
@@ -90,7 +90,7 @@ var productSeeds =  [
     "image" : "martian-sunset-cruise.jpg",
     "summary" : "What better way to say 'I love you' then watching a cold Martian sunset?",
     "description": "A perfect first date or anniversay gift! The sunsets on Mars remind you just how warm Earth was, and how tired you are of the color red!",
-    "price" : 929,
+    "price" : 92900,
     "inventory" : 1,
     "status" : "published",
     "published_at" : new Date(),
@@ -107,7 +107,7 @@ var productSeeds =  [
     "image" : "moon-races.jpg",
     "summary" : "To the moons and back! Race in space with this fun adventure.",
     "description": "Spend the day in the Buck Rogers way - racing from the surface of Mars against a talented field of pilots. Be the first to touch down on Phobos, grab the next clue, and then head over to Deimos for the final clue. The winner will be the first space racer to return to the hidden finish line on Mars!",
-    "price" : 64000,
+    "price" : 6400000,
     "inventory" : 99,
     "status" : "published",
     "published_at" : new Date(),
@@ -124,7 +124,7 @@ var productSeeds =  [
     "image" : "one-way-reentry.jpg",
     "summary" : "Sometimes you need to get back in a hurry, our One-way Re-entry might get you there.",
     "description": "Why wait in long lines for a rocket to take you slowly back to Earth when you can use our brand new Mars Ejection Technology? We'll launch you at the Earth at 10 times the speed of our passenger rockets - all you need to do is slow down enough so you don't burn up. Cut your return time (and possibly yourself) in half!",
-    "price" : 83262,
+    "price" : 8326200,
     "inventory" : 99,
     "status" : "published",
     "published_at" : new Date(),
@@ -141,7 +141,7 @@ var productSeeds =  [
     "image" : "valles-marineris-weekend.jpg",
     "summary" : "Come get lost in one of the biggest trenches in the solar system",
     "description": "Get yourself in deep with our Weekend Trip to Valles Marinaris. We'll trek along the terrifying edges of the huge, deep crack in the surface of Mars. You'll forget your fears as we walk deeper and deeper into the interior of the Red Planet.",
-    "price" : 35333,
+    "price" : 3533300,
     "inventory" : 33,
     "status" : "published",
     "published_at" : new Date(),
@@ -158,7 +158,7 @@ var productSeeds =  [
     "image" : "your-own-crater.jpg",
     "summary" : "Buy one for yourself or the one you love! Nothing says 'you're truly special' like a huge hole in the ground",
     "description": "The Martian surface is scarred by huge numbers of craters - but we like to think of these gigantic holes as 'scars of love' - so say I love you by buying your very own! Whether it's a personal vanity treat or for that very special someone, a Martian crater shows just how *deep* you really are.",
-    "price" : 99999,
+    "price" : 9999900,
     "inventory" : 0,
     "status" : "published",
     "published_at" : new Date(),
@@ -170,29 +170,28 @@ var productSeeds =  [
     }
   }
 ];
+
 if(Products.find().count() === 0){
   _.each(productSeeds, function(product){
     Products.insert(product);
-    console.log("poszlo", product.sku);
+    console.log("Inserted ", product.sku);
   })
 }
 
 if(Meteor.users.find().count() === 0){
   var id = Accounts.createUser({
-    username : "admin",
-    email: "admin@test.pl",
-    password : "admin",
-    profile : {name: "Big Admin"},
+    username : "Administrator",
+    email: "admin@test.com",
+    password: "admin123",
+    profile: { name: "Big Admin" },
     roles : []
-
   });
 
   Roles.addUsersToRoles(id, ["Administrator"]);
-  console.log("Admin user added.....");
+  console.log("Added Admin user...");
 }
 
 if(Vendors.find().count() === 0){
-
   var vendors = [
     {
       id : 1,
@@ -216,6 +215,6 @@ if(Vendors.find().count() === 0){
 
   _.each(vendors, function(vendor){
     Vendors.insert(vendor);
-    console.log("Added vendors")
+    console.log("Added ", vendor.name);
   });
 }
